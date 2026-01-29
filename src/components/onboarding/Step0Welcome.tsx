@@ -141,14 +141,6 @@ export function Step0Welcome({
           </div>
         </div>
 
-        {/* Social Proof */}
-        <div className="text-center mb-8">
-          <p className="text-slate-500 dark:text-slate-400">
-            Trusted by 10,000+ coaches, consultants, and
-            educators worldwide
-          </p>
-        </div>
-
         {/* Footer Links */}
         <div className="text-center space-x-4 text-sm">
           <a

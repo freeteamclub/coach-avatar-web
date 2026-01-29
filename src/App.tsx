@@ -14,6 +14,7 @@ import { Step5HowYouWork } from "./components/onboarding/Step5HowYouWork";
 import { Step6Boundaries } from "./components/onboarding/Step6Boundaries";
 import { Step7SummaryReview } from "./components/onboarding/Step7SummaryReview";
 import { FlowchartDiagram } from "./components/FlowchartDiagram";
+import { PublicChat } from "./components/PublicChat";
 import { AuthProvider, useAuth } from "./lib/AuthContext";
 import { AuthPage } from "./components/auth/AuthPage";
 import { useAvatar } from "./lib/useAvatar";
@@ -571,6 +572,9 @@ function AppContent() {
 function AppRoutes() {
   return (
     <Routes>
+      {/* Public chat route - no auth required */}
+      <Route path="/chat/:avatarId" element={<PublicChat />} />
+      {/* All other routes require auth */}
       <Route path="/*" element={<AppContent />} />
     </Routes>
   );
